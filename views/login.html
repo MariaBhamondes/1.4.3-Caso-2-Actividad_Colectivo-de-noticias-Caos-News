@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Inicio Sesion</title>
+
+        <!--Importar Bootstrap-->
+        <link rel="stylesheet" href="../Resources/Bootstrap/css/bootstrap.min.css">
+        <script src="../Resources/Bootstrap/js/bootstrap.min.js"></script>
+
+        <!--Importar hoja de estilos-->
+        <link rel="stylesheet" href="../Resources/Style/estilos.css">
+
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-12 col-md-5">
+                <div class="sidenav">
+                    <div class="login-main-text center">
+                        <img src="../resource/img/pinterest_profile_image.png" alt="Logo" class="logo"> <br>
+                        <h2>Inicio de Sesión</h2>
+                        <p>Ingrese sus datos en los campos respectivos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <a href="index.html" class="btn btn-volver">VOLVER</a>
+                <form class="login-form" id="for">
+                    <div class="form-group">
+                        <label>
+                            <img src="../Resources/img/email.png">
+                            Email
+                        </label>
+                        <input type="email" class="form-control" id="correo" value="" placeholder="Correo electrónico">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <img src="../Resources/img/password.png">
+                            Contraseña
+                        </label>
+                        <input type="password" class="form-control" id="pass" value="" placeholder="Contraseña">
+                    </div>
+                    <div class="row">
+                        <div class="d-grid gap-2 col-12 col-md-6 mx-auto">
+                            <button type="button" class="btn btn-ingresar" id="ingresar">Iniciar Sesión</button>
+                        </div>
+                        <div class="d-grid gap-2 col-12 col-md-6 mx-auto">
+                            <button type="submit" class="btn btn-recuperar">Recuperar contraseña</button>
+                        </div>
+                    </div>
+                </form>
+                <!--Alerta-->
+                <div class="alert alert-danger alert" role="alert" id="mensaje">
+                    Datos no son válidos!
+                </div>
+            </div>
+        </div>
+
+        <!--Importar hoja de JavaScript-->
+        <script src="../Resources/Js/manejo_login.js"></script>
+    </body>
+</html>

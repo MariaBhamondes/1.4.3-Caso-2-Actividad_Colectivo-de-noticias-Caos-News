@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Historial Reportajes</title>
+
+        <!--Importar Bootstrap-->
+        <link rel="stylesheet" href="../../Resources/Bootstrap/css/bootstrap.min.css">
+        <script src="../../Resources/Bootstrap/js/bootstrap.min.js"></script>
+
+        <!--Importar hoja de estilos-->
+        <link rel="stylesheet" href="../../Resources/Style/estilos.css">
+
+    </head>
+    <body class="bg">
+        <div class="container">
+            <header class="bg-container">
+                <div class="row">
+                    <div class="col-12 col-md-3 center">
+                        <img src="../../resource/img/pinterest_profile_image.png" alt="Logo Caos News" class="logo"> 
+                        <br> <hr class="hr-noticia">
+                        <img src="../../Resources/img/user-avatar.jpg" class="avatar">
+                        <div class="descripcion">
+                            Cargo: Administrador
+                            <br> Nombre: José
+                            <br> Apellido: Martínez
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-9">                       
+                        <a href="../index.html" class="btn btn-salir">CERRAR SESIÓN</a>
+                        <a href="#" class="btn btn-salir">NUEVO COLABORADOR</a>
+                        <div class="ventanas">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item activo ">
+                                    <a class="nav-link" aria-current="page" href="administrador_solicitudes.html">| Solicitudes</a>
+                                </li>
+                                <li class="nav-item inactivo ">
+                                    <a class="nav-link" href="administrador_aprobados.html">| Reportajes Aprobados</a>
+                                </li>
+                                <li class="nav-item inactivo ">
+                                    <a class="nav-link" href="administrador_rechazados.html">| Reportajes Rechazados</a>
+                                </li>
+                            </ul>
+                            <!--Contenido de la pestaña-->
+                            <div class="contenido">
+                                <!-- Modal/Alerta ACEPTAR-->
+                                <div class="modal fade" id="alertAceptar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">DEFINIR IMPORTANCIA DEL REPORTAJE</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <label for="importancia">Seleccione la alternativa correspondiente:</label>
+                                                <div class="form-check">
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        <b>SÍ</b> es Destacado
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                    </label>
+                                                    
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        <b>NO</b> es Destacado
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a href="administrador_solicitudes.html" class="btn btn-aceptar" >Aceptar</a>
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal/Alerta CANCELAR-->
+                                <div class="modal fade" id="alertCancelar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">DEFINIR ASPECTOS A MEJORAR DEL REPORTAJE</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <label for="comentario">Escriba de forma detallada los aspectos que se deben modificar:</label>
+                                                <textarea name="comentario" id="comentario" class="comentario-rechazo" cols="30" rows="10"></textarea>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a href="administrador_solicitudes.html" class="btn btn-aceptar" >Aceptar</a>
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="cursor">NUEVO MECANISMO DE REESTABLECER LA ECONOMÍA</h3>
+                                    <p class="cursor">
+                                        Fecha: 12/04/2021 <br>
+                                        Autor: Juan Pérez<br>
+                                    </p>
+                                    <hr class="hr-noticia">
+                                    <br>
+                                    <img src="../../Resources/img/reportaje.jpg" alt="Imagen reportaje" title="Imagen reportaje" class="img-reportaje">
+                                    <p class="descrip-reportaje cursor">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat purus 
+                                        eget mauris auctor, et fringilla ex porttitor. Aliquam erat volutpat.
+                                        Cras porta rhoncus elit in pretium. Etiam quis egestas nisl, eu laoreet ligula. 
+                                        Sed et purus eu est iaculis euismod. Nunc imperdiet, dui in efficitur vestibulum, 
+                                        nunc risus sagittis metus, ut finibus felis ligula sit amet tortor. Vestibulum 
+                                        dictum nisi sem, sit amet lobortis nunc molestie a. Ut tempor, magna vitae 
+                                        sollicitudin sodales, lectus dolor facilisis ex, et feugiat sapien nunc a dolor. 
+                                        Vestibulum eget eros convallis, vestibulum lorem eu, facilisis risus. Etiam non 
+                                        enim sit amet arcu commodo semper ornare feugiat nibh. Vivamus ullamcorper orci 
+                                        sit amet placerat iaculis. Quisque faucibus orci lorem, eget tincidunt ligula 
+                                        convallis id. <br> <br>
+
+                                        Aliquam arcu eros, ultricies eu sapien sit amet, maximus sagittis magna. Fusce 
+                                        non ultricies nunc, nec elementum magna. Integer dolor lectus, lacinia non est 
+                                        vel, mollis interdum massa. Fusce elementum mi et lectus gravida, id venenatis 
+                                        elit tincidunt. Integer egestas quam quis magna pellentesque facilisis. Maecenas 
+                                        laoreet ipsum urna, et elementum felis ultrices nec. Curabitur id ex laoreet, 
+                                        dapibus mauris at, sagittis nunc. Maecenas condimentum lobortis nulla. 
+                                        Pellentesque at accumsan odio, tincidunt ullamcorper leo. Phasellus placerat 
+                                        consectetur rutrum. Pellentesque eu vulputate turpis. Pellentesque placerat 
+                                        arcu lacus, nec blandit tortor posuere in. Vestibulum lectus erat, varius ac 
+                                        magna et, porttitor consectetur sapien. Nullam erat nulla, laoreet sed tristique 
+                                        eu, fringilla a odio. Sed finibus auctor tempor. In et enim faucibus, aliquam 
+                                        eros non, consectetur nulla. <br> <br>
+
+                                        Duis metus lorem, molestie at turpis sit amet, finibus porttitor urna. Sed 
+                                        feugiat semper aliquam. Maecenas nibh urna, porta vitae elit a, hendrerit 
+                                        viverra dolor. Cras finibus turpis ac vestibulum vulputate. Aliquam mollis 
+                                        turpis sed finibus fringilla. Quisque convallis euismod ex, in laoreet tellus. 
+                                        In hac habitasse platea dictumst. Fusce laoreet sagittis quam. Vestibulum non 
+                                        dolor et massa fringilla tempor blandit ac neque. Nunc sodales tortor volutpat 
+                                        orci rhoncus, id ultricies magna hendrerit. Proin euismod massa in quam dapibus, 
+                                        et vestibulum magna cursus. Praesent arcu nisi, dictum a dictum sed, sollicitudin
+                                        aliquam velit. Morbi pretium accumsan tempus. Aliquam erat volutpat. Fusce ut 
+                                        nibh ac odio lacinia commodo. Fusce suscipit, turpis ac consequat ullamcorper, 
+                                        lacus nunc blandit justo, et tempor ex dui viverra dui. <br> <br>
+                                    </p> <hr class="hr-noticia">
+
+                                    <div class="row">
+                                        <div class="col-12 col-md-3"></div>
+                                        <div class=" d-grid gap-2 col-12 col-md-3">
+                                            <button type="button" class="btn btn-enviar"  data-bs-toggle="modal" data-bs-target="#alertAceptar"> Aprobar </button>
+                                        </div>
+                                        <div class=" d-grid gap-2 col-12 col-md-3">
+                                            <button type="button" class="btn btn-cancelar"  data-bs-toggle="modal" data-bs-target="#alertCancelar"> Rechazar </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <hr class="hr-nuevo">
+
+                                <div>
+                                    <h3 class="cursor">LAS NOTICIAS ESTÁN CAMBIANDO</h3>
+                                    <p class="cursor">
+                                        Fecha: 12/04/2021 <br>
+                                        Autor: Francisco Dinamarca <br>
+                                    </p>
+                                    <hr class="hr-noticia cursor">
+                                    <br>
+                                    <img src="../../Resources/img/reportaje2.jpg" alt="Imagen reportaje" title="Imagen reportaje" class="img-reportaje">
+                                    <p class="descrip-reportaje cursor">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat purus 
+                                        eget mauris auctor, et fringilla ex porttitor. Aliquam erat volutpat.
+                                        Cras porta rhoncus elit in pretium. Etiam quis egestas nisl, eu laoreet ligula. 
+                                        Sed et purus eu est iaculis euismod. Nunc imperdiet, dui in efficitur vestibulum, 
+                                        nunc risus sagittis metus, ut finibus felis ligula sit amet tortor. Vestibulum 
+                                        dictum nisi sem, sit amet lobortis nunc molestie a. Ut tempor, magna vitae 
+                                        sollicitudin sodales, lectus dolor facilisis ex, et feugiat sapien nunc a dolor. 
+                                        Vestibulum eget eros convallis, vestibulum lorem eu, facilisis risus. Etiam non 
+                                        enim sit amet arcu commodo semper ornare feugiat nibh. Vivamus ullamcorper orci 
+                                        sit amet placerat iaculis. Quisque faucibus orci lorem, eget tincidunt ligula 
+                                        convallis id. <br> <br>
+
+                                        Aliquam arcu eros, ultricies eu sapien sit amet, maximus sagittis magna. Fusce 
+                                        non ultricies nunc, nec elementum magna. Integer dolor lectus, lacinia non est 
+                                        vel, mollis interdum massa. Fusce elementum mi et lectus gravida, id venenatis 
+                                        elit tincidunt. Integer egestas quam quis magna pellentesque facilisis. Maecenas 
+                                        laoreet ipsum urna, et elementum felis ultrices nec. Curabitur id ex laoreet, 
+                                        dapibus mauris at, sagittis nunc. Maecenas condimentum lobortis nulla. 
+                                        Pellentesque at accumsan odio, tincidunt ullamcorper leo. Phasellus placerat 
+                                        consectetur rutrum. Pellentesque eu vulputate turpis. Pellentesque placerat 
+                                        arcu lacus, nec blandit tortor posuere in. Vestibulum lectus erat, varius ac 
+                                        magna et, porttitor consectetur sapien. Nullam erat nulla, laoreet sed tristique 
+                                        eu, fringilla a odio. Sed finibus auctor tempor. In et enim faucibus, aliquam 
+                                        eros non, consectetur nulla. <br> <br>
+
+                                        Duis metus lorem, molestie at turpis sit amet, finibus porttitor urna. Sed 
+                                        feugiat semper aliquam. Maecenas nibh urna, porta vitae elit a, hendrerit 
+                                        viverra dolor. Cras finibus turpis ac vestibulum vulputate. Aliquam mollis 
+                                        turpis sed finibus fringilla. Quisque convallis euismod ex, in laoreet tellus. 
+                                        In hac habitasse platea dictumst. Fusce laoreet sagittis quam. Vestibulum non 
+                                        dolor et massa fringilla tempor blandit ac neque. Nunc sodales tortor volutpat 
+                                        orci rhoncus, id ultricies magna hendrerit. Proin euismod massa in quam dapibus, 
+                                        et vestibulum magna cursus. Praesent arcu nisi, dictum a dictum sed, sollicitudin
+                                        aliquam velit. Morbi pretium accumsan tempus. Aliquam erat volutpat. Fusce ut 
+                                        nibh ac odio lacinia commodo. Fusce suscipit, turpis ac consequat ullamcorper, 
+                                        lacus nunc blandit justo, et tempor ex dui viverra dui. <br> <br>
+                                    </p> <hr class="hr-noticia">
+
+                                    <div class="row">
+                                        <div class="col-12 col-md-3"></div>
+                                        <div class=" d-grid gap-2 col-12 col-md-3">
+                                            <button type="button" class="btn btn-enviar"  data-bs-toggle="modal" data-bs-target="#alertAceptar"> Aprobar </button>
+                                        </div>
+                                        <div class=" d-grid gap-2 col-12 col-md-3">
+                                            <button type="button" class="btn btn-cancelar"  data-bs-toggle="modal" data-bs-target="#alertCancelar"> Rechazar </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>       
+                    </div>
+                </div>               
+            </header>
+        </div>
+    </body>
+</html>
