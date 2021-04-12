@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Reportajes Aprobados</title>
+
+        <!--Importar Bootstrap-->
+        <link rel="stylesheet" href="../../Resources/Bootstrap/css/bootstrap.min.css">
+        <script src="../../Resources/Bootstrap/js/bootstrap.min.js"></script>
+
+        <!--Importar hoja de estilos-->
+        <link rel="stylesheet" href="../../Resources/Style/estilos.css">
+
+    </head>
+    <body class="bg">
+        <div class="container">
+            <header class="bg-container">
+                <div class="row">
+                    <div class="col-12 col-md-3 center">
+                        <img src="../../resource/img/pinterest_profile_image.png" alt="Logo Caos News" class="logo"> 
+                        <br> <hr class="hr-noticia">
+                        <img src="../../Resources/img/user-avatar.jpg" class="avatar">
+                        <div class="descripcion">
+                            Cargo: Administrador
+                            <br> Nombre: José
+                            <br> Apellido: Martínez
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-9">                        
+                        <a href="../index.html" class="btn btn-salir">CERRAR SESIÓN</a>
+                        <a href="#" class="btn btn-salir">NUEVO COLABORADOR</a>
+                        <div class="ventanas">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item inactivo ">
+                                    <a class="nav-link" aria-current="page" href="administrador_solicitudes.html">| Solicitudes</a>
+                                </li>
+                                <li class="nav-item activo ">
+                                    <a class="nav-link" href="administrador_aprobados.html">| Reportajes Aprobados</a>
+                                </li>
+                                <li class="nav-item inactivo ">
+                                    <a class="nav-link" href="administrador_rechazados.html">| Reportajes Rechazados</a>
+                                </li>
+                            </ul>
+                            <!--Contenido de la pestaña-->
+                            <div class="contenido table-responsive">
+                                <!--Tabla-->
+                                <table class="table">
+                                    <thead class="bg-table">
+                                        <tr>
+                                            <th>Id Reportaje</th>
+                                            <th>Título Reportaje</th>
+                                            <th>Categoría Reportaje</th>
+                                            <th>Destacado</th>
+                                            <th>Fecha Publicación</th>
+                                            <th>Autor</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th> #11 </th>
+                                            <td> Lorem ipsum dolor sit amet.</td>
+                                            <td> Economía </td>
+                                            <td class="center">
+                                                <img src="../../Resources/img/true.png" alt="Sí es destacado" title="Sí es destacado" class="dest">
+                                            </td>
+                                            <td> 12/04/2019 </td>
+                                            <td> Daniela Martínez </td>
+                                        </tr>
+                                        <tr>
+                                            <th> #22 </th>
+                                            <td> Lorem ipsum dolor sit amet.</td>
+                                            <td> Deporte </td>
+                                            <td class="center"> 
+                                                <img src="../../Resources/img/false.png" alt="No es destacado" title="No es destacado" class="dest">
+                                            </td>
+                                            <td> 30/07/2020 </td>
+                                            <td> Francisco Dinamarca </td>
+                                        </tr>
+                                        <tr>
+                                            <th> #30 </th>
+                                            <td> Lorem ipsum dolor sit amet.</td>
+                                            <td> Educación </td>
+                                            <td class="center">
+                                                <img src="../../Resources/img/true.png" alt="Sí es destacado" title="Sí es destacado" class="dest">
+                                            </td>
+                                            <td> 31/01/2021 </td>
+                                            <td> Esteban Herrera </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>       
+                    </div>
+                </div>               
+            </header>
+        </div>
+    </body>
+</html>

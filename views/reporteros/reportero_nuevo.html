@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Nuevo Reportaje</title>
+
+        <!--Importar Bootstrap-->
+        <link rel="stylesheet" href="../../Resources/Bootstrap/css/bootstrap.min.css">
+        <script src="../../Resources/Bootstrap/js/bootstrap.min.js"></script>
+
+        <!--Importar hoja de estilos-->
+        <link rel="stylesheet" href="../../Resources/Style/estilos.css">
+
+    </head>
+    <body class="bg">
+        <div class="container">
+            <header class="bg-container">
+                <div class="row">
+                    <div class="col-12 col-md-3 center">
+                        <img src="../../resource/img/pinterest_profile_image.png" alt="Logo Caos News" class="logo"> 
+                        <br> <hr class="hr-noticia">
+                        <img src="../../Resources/img/user-avatar.jpg" class="avatar">
+                        <div class="descripcion">
+                            Cargo: Reportero
+                            <br> Nombre: Francisco
+                            <br> Apellido: Dinamarca
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <a href="../index.html" class="btn btn-salir">CERRAR SESIÓN</a> <br>
+                        <div class="ventanas">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item activo">
+                                    <a class="nav-link" aria-current="page" href="reportero_nuevo.html">| Nuevo Reportaje</a>
+                                </li>
+                                <li class="nav-item inactivo">
+                                    <a class="nav-link" href="reportero_historial.html">| Historial Reportajes</a>
+                                </li>
+                            </ul>
+                            <!--Contenido de la pestaña-->
+                            <div class="contenido">
+                                <!--Formulario-->
+                                <form>
+                                    <!--Título reportaje-->
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-0 col-md-1"></div>
+                                            <div class="col-12 col-md-10">
+                                                <label for="titulo" class="form-label">Título:</label>
+                                                <input type="text" class="form-control" name="titulo" autofocus placeholder="Ingrese título del reportaje" required/><br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Contenido reportaje-->
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-0 col-md-1"></div>
+                                            <div class="col-12 col-md-10">
+                                                <label for="contenido" class="form-label">Contenido:</label>
+                                                <textarea name="contenido"  class="form-control textarea" cols="30" rows="10" placeholder="Ingrese el contenido del reportaje" required></textarea><br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Subir imágen-->
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-0 col-md-1"></div>
+                                            <div class="col-12 col-md-11">
+                                                <label for="archivo" class="form-label">Imágenes:</label>
+                                                <input name="archivo" type="file" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Seleccionar categoria-->
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-0 col-md-1"></div>
+                                            <div class="col-12 col-md-10">
+                                                <label for="categoria" class="form-label">Categoria:</label><br>
+                                                <select name="categoria" id="categoria">
+                                                    <option value="0">Seleccione una categoría</option>
+                                                    <option value="1">Deporte</option>
+                                                    <option value="2">Economía</option>
+                                                    <option value="3">Farándula</option>
+                                                    <option value="4">Policial</option>
+                                                    <option value="5">Politica</option>
+                                                    <option value="6">Otro</option>
+                                                </select><br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Nombre autor-->
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-0 col-md-1"></div>
+                                            <div class="col-12 col-md-10">
+                                                <label for="autor" class="form-label">Autor:</label>
+                                                <input type="text" class="form-control" name="autor" autofocus placeholder="Ingrese nombre del autor" required/><br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Botones-->
+                                    <div class="row">
+                                        <div class="col-1 col-lg-3"></div>
+                                        <div class="col-5 col-lg-3">
+                                            <!-- Boton alerta Mensaje enviado -->
+                                            <button type="submit" class="btn btn-enviar" data-bs-toggle="modal" data-bs-target="#alertEnviar">ENVIAR</button> 
+                                        </div>
+                                        <div class="col-5 col-lg-3">
+                                            <!-- Boton alerta Redireccionamiento de vista -->
+                                            <button type="button" class="btn btn-cancelar" data-bs-toggle="modal" data-bs-target="#alertCancelar">CANCELAR</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>               
+            </header>
+        </div>
+    </body>
+</html>
